@@ -25,9 +25,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "Portfolio_Pablo_Nodari/PFinal_Pablo_Nodari/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "Portfolio_Pablo_Nodari/PFinal_Pablo_Nodari/node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "Portfolio_Pablo_Nodari/PFinal_Pablo_Nodari/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -1,0 +1,17 @@
+div{
+    background-color: #a1b5cb;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+@media (min-width: 411px) {
+    .header{
+        flex-direction: row;
+    }
+    
+}
+
