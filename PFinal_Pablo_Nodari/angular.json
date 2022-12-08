@@ -26,11 +26,11 @@
             ],
             "styles": [
               "src/styles.css",
-              "Portfolio_Pablo_Nodari/PFinal_Pablo_Nodari/node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css"
+              
             ],
             "scripts": [
-              "Portfolio_Pablo_Nodari/PFinal_Pablo_Nodari/node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "Portfolio_Pablo_Nodari/PFinal_Pablo_Nodari/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
