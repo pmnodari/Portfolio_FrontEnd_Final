@@ -8,8 +8,11 @@ div{
 /* Etiqueta Nombre */
 #nombre{
     font-weight: bold;
+    font-size: 20px;
     margin-top: 20%;
-
+}
+#profecion{
+    font-size: 24px;
 }
 @media (min-width: 576px) {
     #foto_perfil{
