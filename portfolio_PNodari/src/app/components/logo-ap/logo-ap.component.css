@@ -15,11 +15,11 @@
 #logoAP{
     width: 150px;
 }
-img{
+.redes img{
     width: 30px;
 }
 @media (min-width: 620px) {
-    img{
+    .redes img{
         width: 50px;
     }
 }

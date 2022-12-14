@@ -13,6 +13,7 @@ img{
 }
 h2{
     padding-top: 20px;
+    text-transform: uppercase;
 }
 .parte1, .parte2{
     display: inline-block;
