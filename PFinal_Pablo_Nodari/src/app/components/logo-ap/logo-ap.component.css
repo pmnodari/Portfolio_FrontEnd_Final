@@ -1,3 +1,42 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+@media (min-width: 620px) {
+    .container{
+        flex-direction: row;
+        margin-bottom: 0;
+    }    
+}
+
 #logoAP{
     width: 150px;
 }
+img{
+    width: 30px;
+}
+@media (min-width: 620px) {
+    img{
+        width: 50px;
+    }
+}
+.redes a{
+    padding: 10px;
+}
+.btn{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-width: medium;
+}
+@media (min-width: 620px) {
+    .btn{
+        margin-right: 10px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
+
+
