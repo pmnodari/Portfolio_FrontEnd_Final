@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class AcercaDeComponent implements OnInit{
   //Inicializamos objeto Persona
-  persona: Persona=new Persona("","","");
+  persona: Persona=new Persona("","","","");
   
   //Llamamos al servicio
   constructor(public personaService: PersonaService){};
