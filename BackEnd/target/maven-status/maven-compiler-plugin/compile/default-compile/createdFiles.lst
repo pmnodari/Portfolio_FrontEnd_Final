@@ -1,0 +1,6 @@
+com\portfolio\pnodari\Service\ImpPersonaService.class
+com\portfolio\pnodari\Interface\IPersonaService.class
+com\portfolio\pnodari\Controller\PersonaController.class
+com\portfolio\pnodari\Repository\IPersonaRepository.class
+com\portfolio\pnodari\Entity\Persona.class
+com\portfolio\pnodari\PnodariApplication.class
