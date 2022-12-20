@@ -20,7 +20,8 @@
                 <img src="../../../assets/instagram.png" alt="logo Instagram">
             </a>            
         </div>
-        <button type="button" class="btn btn-outline-light" (click)="login()">Ingreso</button>
+        <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Ingreso</button>
+        <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
         
     </div>
 </div>
