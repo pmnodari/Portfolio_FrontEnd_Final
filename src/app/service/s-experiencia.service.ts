@@ -25,7 +25,7 @@ export class SExperienciaService {
   //Detalle de una experiencia
   public detail(id: number): Observable<Experiencia>{
     return this.httpClient.get<Experiencia>(this.expURL + `detail/${id}`);
-    //TEner en cuenta las comillar es `` por que se le pasa un valor por el PathVariable.
+    //Tener en cuenta las comillar es `` por que se le pasa un valor por el PathVariable.
   }
 
   //Guardar

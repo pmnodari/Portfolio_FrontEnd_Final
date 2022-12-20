@@ -31,8 +31,21 @@ export class ExperienciaComponent implements OnInit{
     }
   }
   //Metodo Cargar experiencia
-cargarExperiencia(): void {
-  this.sExperiencia.lista().subscribe(data=>{this.expe=data});
+  cargarExperiencia(): void {
+    this.sExperiencia.lista().subscribe(data=>{this.expe=data});
+}
+
+  onDelete(id?: number): void{
+    if (id !=undefined) {
+      this.sExperiencia.delete(id).subscribe(data=>{
+        //Volver a cargar la lista, pero sin la expe eliminada
+        this.cargarExperiencia();
+      }, err=>{
+        alert("No se pudo eliminar el registro")
+      }
+      );
+      
+    }
 }
 
 }

@@ -1,25 +1,48 @@
 <div class="row">
-    <h1>Experiencia Laboral</h1>
+  <h1>Experiencia Laboral</h1>
 
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaExp" *ngIf="isLogged">
-            Nueva Experiencia
-        </button>
-    </div>
+  <div class="col-lg-2 mb-4 mt-2">
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/nuevaExp"
+      *ngIf="isLogged"
+    >
+      Nueva Experiencia
+    </button>
+  </div>
 
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Experiencia of expe">
-                    <td>{{Experiencia.nombreExp}}</td>
-                    <td>{{Experiencia.descripcionExp}}</td>
-                    <td>Editar</td>
-                    <td>Borrar</td>
-                </tr>
-            </tbody>
-    
-        </table>
-    </div>   
-
+  <div class="container-fluid">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descripción</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr *ngFor="let Experiencia of expe">
+          <td>
+            <h6>{{ Experiencia.nombreExp }}</h6>
+          </td>
+          <td>{{ Experiencia.descripcionExp }}</td>
+          <!-- No debe llevar a un formulario para editar: routerLink -->
+          <td *ngIf="isLogged">
+            <button
+              class="btn btn-warning"
+              routerLink="/editExp/{{ Experiencia.id }}"
+            >
+              <i class="bi bi-pencil-square"></i>
+            </button>
+          </td>
+          <!-- Solo elimina, no necesita formulario -->
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="onDelete(Experiencia.id)">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
