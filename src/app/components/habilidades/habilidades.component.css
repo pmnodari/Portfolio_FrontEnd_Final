@@ -3,3 +3,11 @@
     background-color: #a1b5cb;
     padding: 10px;
 }
+button{
+    margin: 20px;
+}
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
