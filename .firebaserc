@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfoliofrontend-736c5": {
+      "hosting": {
+        "PFinal_Pablo_Nodari": [
+          "portfoliofrontend-736c5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfoliofrontend-736c5"
+  }
+}
