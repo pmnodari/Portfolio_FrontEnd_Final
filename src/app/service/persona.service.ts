@@ -10,6 +10,7 @@ import { Persona } from '../model/persona.model';
 export class PersonaService {
   //Creamos variable ruta fija
   //URL="http://localhost:8080/personas/";
+  
   URL= environment.URL+'personas/'
 
   constructor(private httpClient: HttpClient) { }

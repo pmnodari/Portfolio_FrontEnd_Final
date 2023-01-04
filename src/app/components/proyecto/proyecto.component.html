@@ -1,35 +1,28 @@
 <div class="row">
   <h1>Proyectos Realizados</h1>
-  <div class="contenedor">
-    <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-      <h2>Blog Café</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fuga
-        qui illum est sequi. Repudiandae aperiam atque necessitatibus voluptates
-        incidunt impedit, minus cumque porro vitae tenetur nulla unde quaerat
-        recusandae!
-      </p>
-    </div>
-    <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-      <img
-        src="../../../assets/blogcafe.jpg"
-        alt="logo Cafe"
-        class="img-fluid img-proyecto"
-      />
-    </div>
 
+  <div class="col-lg-2 mb-4 mt-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevoProyecto" *ngIf="isLogged"
+    >Agregar Proyecto</button>
+  </div>
+
+  <div class="contenedor" *ngFor="let iProyecto of proyecto">
     <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-      <h2>Freelancer</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fuga
-        qui illum est sequi. Repudiandae aperiam atque necessitatibus voluptates
-        incidunt impedit, minus cumque porro vitae tenetur nulla unde quaerat
-        recusandae!
-      </p>
-    </div>
+      <h2>{{iProyecto?.nombreP}}</h2>
+      <p>{{iProyecto?.descripcionP}}</p>
+       <!-- Botones de editar y eliminar -->
+      <div *ngIf="isLogged">
+        <button class="btn btn-warning m-2" routerLink="/editProyecto/{{ iProyecto.id }}">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+        <button class="btn btn-danger m-2" (click)="onDelete(iProyecto.id)">
+          <i class="bi bi-trash-fill"></i>
+        </button>
+      </div>
+    </div>  
     <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-      <img
-        src="../../../assets/freelancer.jpg"
+      <img 
+        src={{iProyecto?.img}}
         alt="logo Cafe"
         class="img-fluid img-proyecto"
       />

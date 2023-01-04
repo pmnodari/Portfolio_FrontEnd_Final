@@ -1,0 +1,28 @@
+<div class="container" *ngIf="proyecto">    
+    <div class="row">
+        <div class="contenedor">
+            <h2>Editar Proyecto</h2>
+            <form action="" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group mt-3">
+                    <label for="nombreP">Nombre del proyecto</label>
+                    <input type="text" name="nombreP" id="nombreP" class="form-control" [(ngModel)]="proyecto.nombreP" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="descripcionP">Descripcion del proyecto</label>
+                    <textarea rows="5" cols="50" maxlength="300" type="text" name="descripcionP" id="descripcionP" class="form-control" [(ngModel)]="proyecto.descripcionP" required></textarea>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="img">Url Imagen</label>
+                    <input type="file" name="img" id="img" class="form-control" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                    <!-- Para seleccionar una imagen -->
+                </div>              
+                
+                <div class="imagen mt-3">
+                    <img [src]="imageService.url" width="200px">
+                </div>
+
+                <button class="btn btn-primary mt-3">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -4,7 +4,9 @@
     background-color: #a1b5cb;
 }
 .contenedor{
-    width: auto;    
+    display: flex;
+    flex-direction: column;
+    
 }
 img{
     width: 100%;
@@ -24,7 +26,14 @@ h2{
     box-shadow: 10px 10px 30px black;
 }
 @media (min-width: 776px) {
+    .contenedor{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+    }
     .img-proyecto{
         border-radius: 10%;
     }
 }
+
