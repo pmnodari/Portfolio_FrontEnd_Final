@@ -3,32 +3,43 @@
   <div class="col-lg-2 mb-4 mt-2">
     <button
       type="button" class="btn btn-dark" routerLink="/nuevaSkill" *ngIf="isLogged">
-      Nueva Skill
+      Agregar Skill
     </button>
   </div>
   <div></div>
   <!-- Graficos -->
+  <div class="circulo">
+
+  </div>
   <div class="text-center col-xs-12 col-md-6 col-lg-4 circulo" *ngFor="let skill of skill">
     <circle-progress
       [percent]="(skill.porcentaje)"
+      [subtitle]="(skill.nombreHS)"
+      [subtitleFontSize]="'30'"
+      [subtitleFontWeight]="'700'"
+      [subtitleColor]="'#61A9DC'"
+      [units]="'%'"
+      [unitsFontSize]="'25'"
+      [unitsFontWeight]="'600'"
+      [unitsColor]="'#0468BC'"
+      [showUnits]="true"
       [radius]="100"
       [outerStrokeWidth]="16"
       [innerStrokeWidth]="8"
       [outerStrokeColor]="'#61A9DC'"
-      [innerStrokeColor]="'#C7E596'"
+      [innerStrokeColor]="'#ffffff'"
       [animation]="true"
       [animationDuration]="300"
       [backgroundGradient]="true"
       [backgroundOpacity]="0.5"
       [backgroundColor]="'#ffffff'"
       [backgroundGradientStopColor]="'#C7E596'"
-      [title]="(skill.nombreHS)"
+      [title]="(skill.porcentaje.toString())"
       [showTitle]="true"
-      [showSubtitle]="false"
+      [showSubtitle]="true"
       [titleColor]="'#0468BC'"
       [titleFontSize]="'25px'"
-      [titleFontWeight]="'700'"
-      [showUnits]="false"
+      [titleFontWeight]="'600'"
       [imageSrc]="''"
       [showImage]="false"
       [imageHeight]="70"
@@ -37,10 +48,10 @@
 
     <!-- Agregamos dos botones -->
     <div *ngIf="isLogged">
-      <button class="btn btn-warning" routerLink="/editSkill/{{ skill.id }}">
+      <button class="btn btn-warning btn_edicion" routerLink="/editSkill/{{ skill.id }}">
         <i class="bi bi-pencil-square"></i>
       </button>
-      <button class="btn btn-danger" (click)="onDelete(skill.id)">
+      <button class="btn btn-danger btn_edicion" (click)="onDelete(skill.id)">
         <i class="bi bi-trash-fill"></i>
       </button>
     </div>

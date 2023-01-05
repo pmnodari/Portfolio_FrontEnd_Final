@@ -1,13 +1,18 @@
 
 .row{
-    background-color: #a1b5cb;
+    /* background-color: #a1b5cb; */
     padding: 10px;
 }
-button{
-    margin: 20px;
+.btn{
+    margin: 10px 0 20px 0;
+}
+.btn_edicion{
+    margin: 5px;
 }
 .circulo{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    gap: 10px;
 }

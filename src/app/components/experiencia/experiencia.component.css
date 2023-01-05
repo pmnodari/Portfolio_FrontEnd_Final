@@ -3,11 +3,15 @@
     padding: 10px;
 }
 div{
-    background-color: #a1b5cb;
+    /* background-color: #a1b5cb; */
 }
 h1, h3{
     display: inline;
     margin-top: 10px;
+}
+.td_descripcion{
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 @media (min-width: 768px) {
     h1{

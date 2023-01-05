@@ -2,7 +2,7 @@
     padding: 20px;
 }
 div{
-    background-color: #a1b5cb;
+    /* background-color: #a1b5cb; */
     text-align: center;
 }
 /* Etiqueta Nombre */
@@ -14,6 +14,7 @@ div{
 }
 #profecion{
     font-size: 20px;
+    font-weight: 600;
     
 }
 .btn_editar{
@@ -26,6 +27,10 @@ div{
     border-radius: 100%;
     box-shadow: 3px 3px 3px gray;
     left: 3.5%;  
+}
+.p_descripcion{
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 @media (min-width: 768px) {
     .btn_editar{
