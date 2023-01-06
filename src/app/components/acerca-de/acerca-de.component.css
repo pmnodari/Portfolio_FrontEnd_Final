@@ -1,5 +1,5 @@
 .row{
-    padding: 20px;
+    padding: 39px;
 }
 div{
     /* background-color: #a1b5cb; */
@@ -39,20 +39,8 @@ div{
         right: -35px;
     }
 }
-@media (min-width: 1368px) {
-    .btn_editar{
-        top: 55px;
-        right: 29px;
-    }
-}
-@media (min-width: 970px) and (max-width:915px) {
-    #nombre{
-        font-size: 20px;
-    }
-    #profecion{
-        font-size: 16px;
-    }
-}
+
+
 
 
 
