@@ -26,6 +26,7 @@ div{
 #foto_perfil{
     border-radius: 100%;
     box-shadow: 3px 3px 3px gray;
+    max-height: 200px;
     left: 3.5%;  
 }
 .p_descripcion{
@@ -42,6 +43,14 @@ div{
     .btn_editar{
         top: 69px;
         right: 35px;
+    }
+}
+@media (min-width: 970px) and (max-width:915px) {
+    #nombre{
+        font-size: 20px;
+    }
+    #profecion{
+        font-size: 16px;
     }
 }
 
