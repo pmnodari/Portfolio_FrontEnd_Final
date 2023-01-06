@@ -10,5 +10,6 @@ export const environment={
     measurementId: 'G-794MBHMSSQ',
   },
     production: true,
-    URL: 'http://localhost:8080/',
+    URL: 'https://portfoliobackendfinal-production-3b40.up.railway.app/',
+   // URL: 'http://localhost:8080/',
 }

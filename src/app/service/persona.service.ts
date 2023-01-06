@@ -32,9 +32,9 @@ export class PersonaService {
     }
     
     //Guardar
-    // public save(educacion: Persona): Observable<any>{
-    //   return this.httpClient.post<any>(this.URL+'create', educacion);
-    // }
+      public save(persona: Persona): Observable<any>{
+        return this.httpClient.post<any>(this.URL+'create', persona);
+    }
   
     //Eliminar
     // public delete(id: number): Observable<any>{
