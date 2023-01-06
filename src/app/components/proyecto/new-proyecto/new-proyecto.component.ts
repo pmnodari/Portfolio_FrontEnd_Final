@@ -14,6 +14,7 @@ export class NewProyectoComponent implements OnInit {
   nombreP="";
   descripcionP="";
   img="";
+  
 
   constructor(private sProyecto: SProyectoService,
               private router: Router,
@@ -38,12 +39,13 @@ export class NewProyectoComponent implements OnInit {
     this.router.navigate(['']);
     });
   }
-
-  //Maneja el evento al seleccionar la imagen, y al manda a firebase Storage
+  //Maneja el evento al seleccionar la imagen, y la manda a firebase Storage
   uploadImage($event: any){
     //const id = this.activatedRoute.snapshot.params['id'];
-    const name="proyecto_"+ this.nombreP;
+    let name="proyecto_"+ this.nombreP;
     this.imageService.uploadImage($event, name);
   }
 
 }
+
+
