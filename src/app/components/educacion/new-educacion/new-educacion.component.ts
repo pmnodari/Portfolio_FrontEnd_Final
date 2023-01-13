@@ -12,7 +12,9 @@ export class NewEducacionComponent implements OnInit {
 
   nombreEdu="";
   descripcionEdu="";
-
+  fecha_fin="";
+  fecha_inicio="";
+  
   constructor(private sEducacion: SEducacionService,
               private router: Router) { }
 
@@ -22,7 +24,7 @@ export class NewEducacionComponent implements OnInit {
   //Creo el registro
   onCreate(): void {
 
-    const edu=new Educacion(this.nombreEdu, this.descripcionEdu);
+    const edu=new Educacion(this.nombreEdu, this.descripcionEdu, this.fecha_inicio, this.fecha_fin);
 
     this.sEducacion.save(edu).subscribe(data=>{
       alert("Fomación añadida");

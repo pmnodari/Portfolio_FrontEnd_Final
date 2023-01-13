@@ -10,6 +10,10 @@
                     <label for="descripcionP">Descripcion del Proyecto</label>
                     <textarea rows="10" cols="50" maxlength="300" type="text" name="descripcionP" id="descripcionP" class="form-control" [(ngModel)]="descripcionP" required></textarea>
                 </div>
+                <div class="form-group mt-3">
+                    <label for="fecha_realizacion">Año de realización</label>
+                    <input type="text" name="fecha_realizacion" id="fecha_realizacion" class="form-control" placeholder="yyyy" [(ngModel)]="fecha_realizacion" required>
+                </div>
             
                 <div class="form-group mt-3">
                     <label for="img">Url Imagen</label>
@@ -20,7 +24,7 @@
                     <img [src]="imageService.url" width="200px">
                 </div>
 
-                <button class="btn btn-primary mt-3">Agregar Proyecto</button>
+                <button class="btn btn-primary mt-3 mb-3">Agregar Proyecto</button>
             </form>
         </div>
     </div>

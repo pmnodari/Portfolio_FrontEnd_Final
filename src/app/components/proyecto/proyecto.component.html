@@ -10,7 +10,8 @@
     <div class="col-sm-12 col-md-7 col-lg-7 parte1">
       <h2>{{iProyecto?.nombreP}}</h2>
       <p>{{iProyecto?.descripcionP}}</p>
-       <!-- Botones de editar y eliminar -->
+      <p>{{"Año realización: "+iProyecto?.fecha_realizacion}}</p>
+        <!-- Botones de editar y eliminar -->
       <div *ngIf="isLogged">
         <button class="btn btn-warning m-2" routerLink="/editProyecto/{{ iProyecto.id }}">
           <i class="bi bi-pencil-square"></i>

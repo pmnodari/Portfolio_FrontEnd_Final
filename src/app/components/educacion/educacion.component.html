@@ -12,6 +12,8 @@
         <tr>
           <th scope="col" class="text-center">Nombre</th>
           <th scope="col" class="text-center">Descripción</th>
+          <th scope="col" class="text-center">Inicio</th>
+          <th scope="col" class="text-center">Fin</th>
         </tr>
       </thead>
       
@@ -21,6 +23,8 @@
             <h6>{{ Educacion.nombreEdu }}</h6>
           </td>
           <td class="td_descripcion">{{ Educacion.descripcionEdu }}</td>
+          <td class="td_descripcion">{{ Educacion.fecha_inicio}}</td>
+          <td class="td_descripcion">{{ Educacion.fecha_fin}}</td>
           <!-- No debe llevar a un formulario para editar: routerLink -->
           <td *ngIf="isLogged">
             <button

@@ -13,6 +13,7 @@ export class NewProyectoComponent implements OnInit {
 
   nombreP="";
   descripcionP="";
+  fecha_realizacion="";
   img="";
   
 
@@ -27,7 +28,7 @@ export class NewProyectoComponent implements OnInit {
   //Creo el registro
   onCreate(): void {
     //Creamos el objeto proyecto y le pasamos a la imagen la url de la imagen alojada en Firebase
-    const proyecto=new Proyecto(this.nombreP, this.descripcionP, this.img=this.imageService.url);
+    const proyecto=new Proyecto(this.nombreP, this.descripcionP, this.fecha_realizacion, this.img=this.imageService.url);
 
     this.sProyecto.save(proyecto).subscribe(data=>{
       alert("Proyecto añadido");
