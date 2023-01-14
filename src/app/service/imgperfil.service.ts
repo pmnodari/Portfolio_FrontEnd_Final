@@ -4,14 +4,9 @@ import { Storage, ref, uploadBytes, getDownloadURL, list } from '@angular/fire/s
 @Injectable({
   providedIn: 'root'
 })
+export class ImgperfilService {
 
-export class ImageService {
-
-  //Utilizaremos el Firebase Storage para guardar las imagenes.
-  //Esta se puede cargar de forma manual o se puede utilizar la API para que devuelva la url de la img
-  //Se instala la libreria de Firebase.
-
-  url: string="";
+  url_nueva: string="";
 
   constructor(private storage: Storage) { }
 
@@ -22,7 +17,7 @@ export class ImageService {
     console.log(file);
 
     //Referencia de la imagen en el Storage, y su nombre
-    const imgRef=ref(this.storage, `imagen/`+name);
+    const imgRef=ref(this.storage, `perfil/`+name);
 
     //Metodo que sube la imagen
     uploadBytes(imgRef, file)
@@ -32,12 +27,12 @@ export class ImageService {
 
     //Metodo obtener imagenes.
     getImage(){
-      const imgRef = ref(this.storage, 'imagen');
-      list(imgRef)
+      const imgeRef = ref(this.storage, 'perfil');
+      list(imgeRef)
         .then(async response=>{
           for(let item of response.items){
-            this.url=await getDownloadURL(item);
-            console.log("La url es: "+this.url);
+            this.url_nueva=await getDownloadURL(item);
+            console.log("La url nueva es: "+this.url_nueva);
             
           }
         })

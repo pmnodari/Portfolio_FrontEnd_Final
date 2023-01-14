@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona.model';
-import { ImageService } from 'src/app/service/image.service';
+import { ImgperfilService } from 'src/app/service/imgperfil.service';
+//import { ImageService } from 'src/app/service/image.service';
 import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class EditAcercaDeComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute,
               private personaService: PersonaService,
               private router: Router,
-              public imageService: ImageService) { }
+              public imgPerfilService: ImgperfilService) { }
 
   ngOnInit(): void {
     const id=this.activatedRoute.snapshot.params['id'];
@@ -34,7 +35,7 @@ export class EditAcercaDeComponent implements OnInit {
     //Obtenemos id de la Persona
     const id=this.activatedRoute.snapshot.params['id'];
     //captura la url de la imagen en la BBDD
-    this.persona.img=this.imageService.url;
+    this.persona.img=this.imgPerfilService.url_nueva;
     //Implementamos metodos
     this.personaService.update(id, this.persona).subscribe(data=>{
       this.router.navigate(['']);
@@ -49,7 +50,7 @@ export class EditAcercaDeComponent implements OnInit {
   uploadImage($event: any){
     const id = this.activatedRoute.snapshot.params['id'];
     const name="perfil_"+id;
-    this.imageService.uploadImage($event, name);
+    this.imgPerfilService.uploadImage($event, name);
   }
 
 }

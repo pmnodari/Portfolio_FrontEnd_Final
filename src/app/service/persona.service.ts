@@ -26,7 +26,7 @@ export class PersonaService {
       
     }
   
-    //Detalle de un registro educacion
+    //Detalle de un registro 
     public detail(id:number): Observable<Persona>{
       return this.httpClient.get<Persona>(this.URL+`detail/${id}`);
     }
